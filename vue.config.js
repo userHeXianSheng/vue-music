@@ -1,21 +1,20 @@
 const { defineConfig } = require('@vue/cli-service')
-module.exports =   defineConfig({
+// const { VantResolver } = require('unplugin-vue-components/resolvers');
+// const ComponentsPlugin = require('unplugin-vue-components/webpack');
+
+module.exports = defineConfig({
   transpileDependencies: true,
-  configureWebpack:{
+  configureWebpack: {
+    // plugins: [
+    //   ComponentsPlugin({
+    //     resolvers: [VantResolver()],
+    //   }),
+    // ],
     externals: {
       'vue':'Vue',
       'vue-router':'VueRouter',
+      'vuex':'Vuex',
       'axios':'axios',
-      'vue-quill-editor':'VueQuillEditor'
     }
-  }
+  },
 })
-
-/*
-module.exports = {
-  devServe:{
-    port:3000,
-    proxy:'https://www.escook.cn'
-  }
-}
-*/

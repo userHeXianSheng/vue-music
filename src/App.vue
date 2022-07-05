@@ -1,17 +1,17 @@
 <template>
-  <div>
-      
-      <router-view></router-view>
-
-  </div>
+  <router-view></router-view>
+  <MusicPlayer></MusicPlayer>
 </template>
 
 <script>
+import MusicPlayer from './components/MusicPlayer.vue'
 export default {
-
+components:{
+  MusicPlayer,
+}
 }
 </script>
 
-<style>
+<style lang='less' scoped>
 
 </style>

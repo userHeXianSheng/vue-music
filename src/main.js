@@ -1,32 +1,26 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
-import router from './router/index'
+import router from './router'
+import store from './store'
 import axios from 'axios'
+axios.defaults.baseURL = 'https://netease-cloud-music-api-nine-peach.vercel.app/';
+// axios.defaults.headers.common['Authorization'] = AUTH_TOKEN;
+// axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+//import { Icon,Col,Row,Button,Tabbar,Swipe, SwipeItem, TabbarItem ,Grid, GridItem,Popup,ActionBar,NavBar,Field, CellGroup} from 'vant';
+//import '../public/index.css'
+//rem布局
+import '../public/rem.js'
+//评论组件
+import Comment from '@/components/Comment.vue'
 
-import './assets/bootstrap.css'
-import './assets/index.css'
+const app = createApp(App)
+app.use(store)
+app.use(router)
+app.use(vant)
+app.use(vant.Lazyload);
+//app.use(Icon,Col, Row,Button,Tabbar,Swipe, SwipeItem, TabbarItem,Grid, GridItem,Popup,ActionBar, NavBar,Field, CellGroup)
+app.component('Comment',Comment)
+app.mount('#app')
+app.config.globalProperties.$http=axios
 
-// import Vant from 'vant';
-// import 'vant/lib/index.css';
-//Vue.use(Vant);
 
-// import ElementUI from 'element-ui';
-// import 'element-ui/lib/theme-chalk/index.css';
-//Vue.use(ElementUI);
-
-// import VueQuillEditor from 'vue-quill-editor'
-// import 'quill/dist/quill.core.css'
-// import 'quill/dist/quill.snow.css'
-// import 'quill/dist/quill.bubble.css'
-//Vue.use(VueQuillEditor)  //富文本编辑器
-
-Vue.config.productionTip = false
-
-axios.defaults.baseURL = 'https://www.escook.cn'
-axios.defaults.baseURL = 'http://localhost:8080'
-Vue.prototype.$http = axios
-
-new Vue({
-  render: h => h(App),
-  router
-}).$mount('#app')

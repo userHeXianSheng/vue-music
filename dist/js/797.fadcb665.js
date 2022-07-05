@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkproject1"]=self["webpackChunkproject1"]||[]).push([[797],{9797:function(e,n,r){r.r(n),r.d(n,{default:function(){return f}});var t=function(){var e=this,n=e.$createElement,r=e._self._c||n;return r("div",[e._v(" Goods-order ")])},u=[],l={},c=l,o=r(1001),s=(0,o.Z)(c,t,u,!1,null,null,null),f=s.exports}}]);
-//# sourceMappingURL=797.fadcb665.js.map

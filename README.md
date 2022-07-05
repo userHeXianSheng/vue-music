@@ -1,4 +1,4 @@
-# project1
+# vue-music
 
 ## Project setup
 ```
